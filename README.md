@@ -23,6 +23,6 @@ This are some figures of the results.
 - The solutions:
 <img src=./plots/real_solutions.jpg width=50%>
 - The Grid sectioning_diagram:
-<img src=./plots/8Triangulation diagram.jpg width=50%>
+<img src=./plots/plots/8Triangulation diagram.jpg width=50%>
 - The FEM result:
 <img src=./plots/8FEM1.jpg width=50%>
