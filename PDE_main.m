@@ -1,35 +1,35 @@
-clc;%Çå¿ÕÃüÁîĞĞ´°¿Ú
-clear;%Çå³ı¹¤×÷¿Õ¼ä
-close all;%¹Ø±ÕËùÓĞÍ¼Ïñ
-%²ÎÊıÉèÖÃ
+clc;%æ¸…ç©ºå‘½ä»¤è¡Œçª—å£
+clear;%æ¸…é™¤å·¥ä½œç©ºé—´
+close all;%å…³é—­æ‰€æœ‰å›¾åƒ
+%å‚æ•°è®¾ç½®
 tic
 h=0.25;
 k = 2/h;
-nel = 3;%Ã¿¸öµ¥ÔªµÄ½ÚµãÊıÄ¿,¼´Ã¿¸öµ¥ÔªÉÏÓĞ¼¸¸öĞÎº¯Êı²ÎÓë×÷ÓÃ£¬µ¥Ôª×ÔÓÉ¶È
-Lx = 1;%¶¨Òåµ¥Ôª×óÓÒ±ß½ç
-Ly = 1;%¶¨Òåµ¥ÔªÉÏÏÂ±ß½ç
-N = k;%·Ö¸îµÄÒ»¸ö·½ÏòµÄµ¥ÔªÊıÄ¿
+nel = 3;%æ¯ä¸ªå•å…ƒçš„èŠ‚ç‚¹æ•°ç›®,å³æ¯ä¸ªå•å…ƒä¸Šæœ‰å‡ ä¸ªå½¢å‡½æ•°å‚ä¸ä½œç”¨ï¼Œå•å…ƒè‡ªç”±åº¦
+Lx = 1;%å®šä¹‰å•å…ƒå·¦å³è¾¹ç•Œ
+Ly = 1;%å®šä¹‰å•å…ƒä¸Šä¸‹è¾¹ç•Œ
+N = k;%åˆ†å‰²çš„ä¸€ä¸ªæ–¹å‘çš„å•å…ƒæ•°ç›®
 paint(N);
-numelx = N;%¶¨Òå·Ö¸îµÄx·½Ïòµ¥ÔªÊıÄ¿
-numely = N;%¶¨Òå·Ö¸îµÄy·½Ïòµ¥ÔªÊıÄ¿
-hx = 2*Lx/numelx;%x·½ÏòÉÏµÄµ¥Ôª³¤¶È
-hy = 2*Ly/numely;%y·½ÏòÉÏµÄµ¥Ôª³¤¶È
-numel = numelx*numely*2;%Ğ¡µ¥ÔªµÄÊıÄ¿,Ã¿¸ö¾ØĞÎ·Ö³ÉÁ½¸öÈı½ÇĞÎ
-numnodx = numelx + 1;%x·½Ïò½Úµã¸öÊı
-numnody = numely + 1;%y·½Ïò½Úµã¸öÊı
-numnod = numnodx*numnody;%×Ü½Úµã¸öÊı
-coordx = linspace(-Lx,Lx,numnodx)';%µÈ·Ö½ÚµãµÄ×ø±ê
-coordy = linspace(-Ly,Ly,numnody)';%µÈ·Ö½ÚµãµÄ×ø±ê
-[X,Y] = meshgrid(coordx,coordy);%ÕÅ³ÉÍø¸ñ£¬XºÍY·Ö±ğ±íÊ¾¶ÔÓ¦Î»ÖÃµÄºá×İ×ø±ê
-X = X';Y = Y';coord = [X(:) Y(:)];%½«×ø±êÕ¹³ÉÒ»ÁĞ¡£
-connect = connect_mat1(numnodx,numnody,nel);%Á¬½Ó¾ØÕó£¬±íÊ¾Ã¿¸öµ¥ÔªÖÜÎ§µÄ½Úµã±àºÅ£¬Ò²¾ÍÊÇÉæ¼°µÄĞÎº¯Êı±àºÅ£¬ÄæÊ±Õë
-ebcdof = unique([1 numnodx numnodx*numely+1:numnodx*numely+numnodx numnodx+1:numnodx:numnodx*(numely-1)+1 2*numnodx:numnodx:numely*numnodx]); % Ç¿ÖÆĞÔ±ß½çµãµÄ±àºÅ
-bigk = sparse(numnod,numnod); %¸Õ¶È¾ØÕóK
-fext = sparse(numnod,1);%ÔØºÉÏòÁ¿f
-%¼ÆËãÏµÊı¾ØÕóKºÍÓÒ¶ËÏîf£¬²¢½«µ¥Î»¸Õ¶È¾ØÕó×é×°
-for e = 1:numel %Í¬Ò»Î¬µÄÇé¿ö£¬ÒÀÈ»°´µ¥ÔªÀ´É¨Ãè
-    ke = elemstiff2d(e,nel,hx,hy,coord,connect);%¼ÆËãµ¥Ôª¸Õ¶È¾ØÕó
-    fe = elemforce2d(e,nel,hx,hy,coord,connect);%¼ÆËãµ¥ÔªÔØºÉÏòÁ¿
+numelx = N;%å®šä¹‰åˆ†å‰²çš„xæ–¹å‘å•å…ƒæ•°ç›®
+numely = N;%å®šä¹‰åˆ†å‰²çš„yæ–¹å‘å•å…ƒæ•°ç›®
+hx = 2*Lx/numelx;%xæ–¹å‘ä¸Šçš„å•å…ƒé•¿åº¦
+hy = 2*Ly/numely;%yæ–¹å‘ä¸Šçš„å•å…ƒé•¿åº¦
+numel = numelx*numely*2;%å°å•å…ƒçš„æ•°ç›®,æ¯ä¸ªçŸ©å½¢åˆ†æˆä¸¤ä¸ªä¸‰è§’å½¢
+numnodx = numelx + 1;%xæ–¹å‘èŠ‚ç‚¹ä¸ªæ•°
+numnody = numely + 1;%yæ–¹å‘èŠ‚ç‚¹ä¸ªæ•°
+numnod = numnodx*numnody;%æ€»èŠ‚ç‚¹ä¸ªæ•°
+coordx = linspace(-Lx,Lx,numnodx)';%ç­‰åˆ†èŠ‚ç‚¹çš„åæ ‡
+coordy = linspace(-Ly,Ly,numnody)';%ç­‰åˆ†èŠ‚ç‚¹çš„åæ ‡
+[X,Y] = meshgrid(coordx,coordy);%å¼ æˆç½‘æ ¼ï¼ŒXå’ŒYåˆ†åˆ«è¡¨ç¤ºå¯¹åº”ä½ç½®çš„æ¨ªçºµåæ ‡
+X = X';Y = Y';coord = [X(:) Y(:)];%å°†åæ ‡å±•æˆä¸€åˆ—ã€‚
+connect = connect_mat1(numnodx,numnody,nel);%è¿æ¥çŸ©é˜µï¼Œè¡¨ç¤ºæ¯ä¸ªå•å…ƒå‘¨å›´çš„èŠ‚ç‚¹ç¼–å·ï¼Œä¹Ÿå°±æ˜¯æ¶‰åŠçš„å½¢å‡½æ•°ç¼–å·ï¼Œé€†æ—¶é’ˆ
+ebcdof = unique([1 numnodx numnodx*numely+1:numnodx*numely+numnodx numnodx+1:numnodx:numnodx*(numely-1)+1 2*numnodx:numnodx:numely*numnodx]); % å¼ºåˆ¶æ€§è¾¹ç•Œç‚¹çš„ç¼–å·
+bigk = sparse(numnod,numnod); %åˆšåº¦çŸ©é˜µK
+fext = sparse(numnod,1);%è½½è·å‘é‡f
+%è®¡ç®—ç³»æ•°çŸ©é˜µKå’Œå³ç«¯é¡¹fï¼Œå¹¶å°†å•ä½åˆšåº¦çŸ©é˜µç»„è£…
+for e = 1:numel %åŒä¸€ç»´çš„æƒ…å†µï¼Œä¾ç„¶æŒ‰å•å…ƒæ¥æ‰«æ
+    ke = elemstiff2d(e,nel,hx,hy,coord,connect);%è®¡ç®—å•å…ƒåˆšåº¦çŸ©é˜µ
+    fe = elemforce2d(e,nel,hx,hy,coord,connect);%è®¡ç®—å•å…ƒè½½è·å‘é‡
     sctr = connect(e,:);
     bigk(sctr,sctr) = bigk(sctr,sctr) + ke;
     fext(sctr) = fext(sctr) + fe;
@@ -38,13 +38,13 @@ u_b=[];
 for i=1:length(ebcdof)
     u_b=[u_b,exp(sum(coord(ebcdof(i),:)))];
 end
-ebcval = u_b; %¼ÙÉè±ß½çÖµ¶¼Îªu_b
+ebcval = u_b; %å‡è®¾è¾¹ç•Œå€¼éƒ½ä¸ºu_b
 bound2=[2:2:2*(numnodx-1)];
 for i=1:numnodx-1
     S = hx*hy/2;
     a=bound2(i);
     nodes=connect(a,:);
-    xe = coord(nodes,:); % µ¥Ôª×ÔÓÉ½Úµã×ø±ê
+    xe = coord(nodes,:); % å•å…ƒè‡ªç”±èŠ‚ç‚¹åæ ‡
     c1 = xe(2,1)*xe(3,2)-xe(3,1)*xe(2,2);
     c2 = xe(3,1)*xe(1,2)-xe(1,1)*xe(3,2);
     c3 = xe(1,1)*xe(2,2)-xe(2,1)*xe(1,2);
@@ -62,40 +62,40 @@ for i=1:numnodx-1
     fext(nodes(2)) = fext(nodes(2)) + f1;
     fext(nodes(3)) = fext(nodes(3)) + f2;
 end
-%±ßÖµÌõ¼ş´¦Àí
+%è¾¹å€¼æ¡ä»¶å¤„ç†
 for i = 1:length(ebcdof)
     n = ebcdof(i);
     bigk(n,:) = 0;
     bigk(n,n) = 1;
     fext(n) = ebcval(i);
 end
-%¹²éîÌİ¶È·¨Çó½â·½³Ì
+%å…±è½­æ¢¯åº¦æ³•æ±‚è§£æ–¹ç¨‹
 u_coeff=bigk\fext;
-% u_coeff = cg(bigk,fext,zeros(numnod,1),1e-50);%Çó³öÏµÊı£¬ÊÂÊµÉÏÒ²ÊÇº¯ÊıÔÚ¶ÔÓ¦µãÉÏµÄÖµ
+% u_coeff = cg(bigk,fext,zeros(numnod,1),1e-50);%æ±‚å‡ºç³»æ•°ï¼Œäº‹å®ä¸Šä¹Ÿæ˜¯å‡½æ•°åœ¨å¯¹åº”ç‚¹ä¸Šçš„å€¼
 u_cal = u_coeff;
 u_cal_re = reshape(u_coeff,numnodx,numnody);
-%Çó¾«È·½â
+%æ±‚ç²¾ç¡®è§£
 L = Lx;
 nsamp = 1001;
-xsamp = linspace(-L,L,nsamp);%100µÈ·ÖÇø¼äÖĞ¼äÓĞ100¸öÊı
+xsamp = linspace(-L,L,nsamp);%100ç­‰åˆ†åŒºé—´ä¸­é—´æœ‰100ä¸ªæ•°
 [X,Y] = meshgrid(xsamp,xsamp);
 uexact = exactsolution2d(X(:),Y(:));
 uexact_re = reshape(uexact,nsamp,nsamp);
-%Õæ½âÍ¼
+%çœŸè§£å›¾
 figure
 h1=mesh(xsamp,xsamp,uexact_re);
 title('Real Solutions');
 xlabel('x');
 ylabel('y');
-% saveas(h1,['./plots/real solutions' '.jpg'])
-%ÓĞÏŞÔª½âÍ¼
+% saveas(h1,['./plots/real_solutions' '.jpg'])
+%æœ‰é™å…ƒè§£å›¾
 figure
 h2 = mesh(coordx,coordy,u_cal_re);
 title('FEM1 Solutions');
 xlabel('x');
 ylabel('y');
 % saveas(h2,['./plots/' num2str(k) 'FEM1' '.jpg'])
-%¼ÆËãÎó²î
+%è®¡ç®—è¯¯å·®
 u_ex = exactsolution2d(coord(:,1),coord(:,2));
 u_ex_re = reshape(u_ex,numnodx,numnody);
 e=0;
