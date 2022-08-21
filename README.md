@@ -28,3 +28,7 @@ This are some figures of the results.
 
 - The FEM result:
 <img src=./plots/8FEM1.jpg width=50%>
+
+
+If you think this work is uesful for yourself, please give me a star.
+Thank you!
