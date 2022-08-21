@@ -22,5 +22,5 @@ title('Triangulation diagram')
 xlabel('x')
 ylabel('y')
 axis([-1,1,-1,1]);
-% saveas(gcf,['./plots/' num2str(N) 'Triangulation diagram' '.jpg'])
+% saveas(gcf,['./plots/' num2str(N) 'Triangulation_diagram' '.jpg'])
 end
