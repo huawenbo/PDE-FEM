@@ -22,7 +22,9 @@ If you want to use this code in your machine, you should fork my work and downlo
 This are some figures of the results.
 - The solutions:
 <img src=./plots/real_solutions.jpg width=50%>
+
 - The Grid sectioning_diagram:
-<img src=./plots/plots/8Triangulation diagram.jpg width=50%>
+<img src=./plots/plots/8Triangulation_diagram.jpg width=50%>
+
 - The FEM result:
 <img src=./plots/8FEM1.jpg width=50%>
