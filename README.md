@@ -1,5 +1,6 @@
 # This is the PDE finite element method.
 We use the finite element method of triangular dissection to solve practical problems, and the related computational algorithms all use the Gaussian numerical integration method in numerical analysis.
+
 ## Question:
 Here are the simulation problems solved by the algorithm.
 
@@ -20,10 +21,9 @@ If you want to use this code in your machine, you should fork my work and downlo
 
 ## Result
 This are some figures of the results.
+
 - The solutions:
 <img src=https://github.com/huawenbo/PDE-FEM/blob/main/plots/real_solutions.jpg width=50%>
-
-![daw](plots/real_solutions.jpg)
 
 - The Grid sectioning_diagram:
 <img src=https://github.com/huawenbo/PDE-FEM/blob/main/plots/8Triangulation_diagram.jpg width=50%>
