@@ -1,4 +1,4 @@
-## This is the PDE finite element method by using the Ritz-Galerkin methods.
+# This is the partial differential equation finite element method by using the Ritz-Galerkin methods.
 We use the finite element method of triangular dissection to solve practical problems, and the related computational algorithms all use the Gaussian numerical integration method in numerical analysis.
 
 ## Question:
