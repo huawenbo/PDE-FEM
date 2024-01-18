@@ -24,12 +24,15 @@ If you want to use this code in your machine, you should fork my work and downlo
 This are some figures of the results.
 
 - The solutions:
+
 <img src="plots/real_solutions.jpg" alt="real_solutions" style="zoom:50%;">
 
 - The Grid sectioning_diagram:
+
 <img src="plots/8Triangulation_diagram.jpg" alt="8Triangulation_diagram" style="zoom:50%;">
 
 - The FEM result:
+
 <img src="plots/8FEM1.jpg" alt="8FEM1" style="zoom:50%;">
 
 
