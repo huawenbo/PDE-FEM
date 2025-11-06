@@ -1,6 +1,4 @@
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 # PDE Finite Element Method
 ## This is the partial differential equation finite element method by using the Ritz-Galerkin method.
