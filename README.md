@@ -1,18 +1,20 @@
 # PDE Finite Element Method
-## This is the partial differential equation finite element method by using the Ritz-Galerkin methods.
+## This is the partial differential equation finite element method by using the Ritz-Galerkin method.
 We use the finite element method of triangular dissection to solve practical problems, and the related computational algorithms all use the Gaussian numerical integration method in numerical analysis.
 
 ## Question:
 Here are the simulation problems solved by the algorithm.
 
 $$
-\left\{\begin{array}{c}
+\left\{
+\begin{array}{c}
 -\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \\
 \mathrm{u}=\mathrm{e}^{-1+y}, \mathrm{x}=-1 \\
 \mathrm{u}=\mathrm{e}^{1+y}, \mathrm{x}=1 \\
 \nabla \mathrm{u} \cdot \overrightarrow{\mathrm{n}}=-\mathrm{e}^{\mathrm{x}-1}, \mathrm{y}=-1 \\
 \mathrm{u}=\mathrm{e}^{\mathrm{x}+1}, \mathrm{y}=1
-\end{array}\right.
+\end{array}
+\right.
 $$
 
 In addition, we compare the errors between the finite element solution and the exact solution at different parametrizations for different mesh dissections.
