@@ -8,11 +8,11 @@ Here are the simulation problems solved by the algorithm.
 $$
 \left\{
 \begin{array}{c}
--\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \\
-\mathrm{u}=\mathrm{e}^{-1+y}, \mathrm{x}=-1 \\
-\mathrm{u}=\mathrm{e}^{1+y}, \mathrm{x}=1 \\
-\nabla \mathrm{u} \cdot \overrightarrow{\mathrm{n}}=-\mathrm{e}^{\mathrm{x}-1}, \mathrm{y}=-1 \\
-\mathrm{u}=\mathrm{e}^{\mathrm{x}+1}, \mathrm{y}=1
+\left. -\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \right. \\ 
+\left. \mathrm{u}=\mathrm{e}^{-1+y}, \mathrm{x}=-1 \right. \\ 
+\left. \mathrm{u}=\mathrm{e}^{1+y}, \mathrm{x}=1 \right. \\ 
+\left. \nabla \mathrm{u} \cdot \overrightarrow{\mathrm{n}}=-\mathrm{e}^{\mathrm{x}-1}, \mathrm{y}=-1 \right. \\ 
+\left. \mathrm{u}=\mathrm{e}^{\mathrm{x}+1}, \mathrm{y}=1 \right.
 \end{array}
 \right.
 $$
