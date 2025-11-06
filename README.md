@@ -20,10 +20,10 @@ $$
 In addition, we compare the errors between the finite element solution and the exact solution at different parametrizations for different mesh dissections.
 
 ## Code
-If you want to use this code in your machine, you should fork my work and download the code in your computer. Then, you just need to run "PDE_main.m". Absolulately, you can change the parameters to get the different results.
+If you want to use this code in your machine, you should fork my work and download the code in your computer. Then, you just need to run "PDE_main.m". Absolutely, you can change the parameters to get the different results.
 
 ## Result
-This are some figures of the results.
+These are some figures of the results.
 
 - The solutions:
 
@@ -38,6 +38,6 @@ This are some figures of the results.
 <img src="plots/8FEM1.jpg" alt="8FEM1" style="zoom:50%;">
 
 
-If you think this work is uesful for yourself, please give me a star.
+If you think this work is useful for yourself, please give me a star.
 
 Thank you!
