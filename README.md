@@ -1,5 +1,3 @@
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
-
 # PDE Finite Element Method
 ## This is the partial differential equation finite element method by using the Ritz-Galerkin method.
 We use the finite element method of triangular dissection to solve practical problems, and the related computational algorithms all use the Gaussian numerical integration method in numerical analysis.
@@ -7,15 +5,17 @@ We use the finite element method of triangular dissection to solve practical pro
 ## Question:
 Here are the simulation problems solved by the algorithm.
 
-$$
-\begin{cases}
--\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \\ 
-\mathrm{u}=\mathrm{e}^{-1+y}, \mathrm{x}=-1 \\ 
-\mathrm{u}=\mathrm{e}^{1+y}, \mathrm{x}=1 \\ 
-\nabla \mathrm{u} \cdot \overrightarrow{\mathrm{n}}=-\mathrm{e}^{\mathrm{x}-1}, \mathrm{y}=-1 \\ 
+```math
+\left\{
+\begin{array}{c}
+-\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \\
+\mathrm{u}=\mathrm{e}^{-1+y}, \mathrm{x}=-1 \\
+\mathrm{u}=\mathrm{e}^{1+y}, \mathrm{x}=1 \\
+\nabla \mathrm{u} \cdot \overrightarrow{\mathrm{n}}=-\mathrm{e}^{\mathrm{x}-1}, \mathrm{y}=-1 \\
 \mathrm{u}=\mathrm{e}^{\mathrm{x}+1}, \mathrm{y}=1
-\end{cases}
-$$
+\end{array}
+\right.
+```
 
 In addition, we compare the errors between the finite element solution and the exact solution at different parametrizations for different mesh dissections.
 
