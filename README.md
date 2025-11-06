@@ -5,7 +5,7 @@ We use the finite element method of triangular dissection to solve practical pro
 ## Question:
 Here are the simulation problems solved by the algorithm.
 
-$$
+```math
 \left\{
 \begin{array}{c}
 -\nabla \cdot(\nabla u)+u=-e^{x+y},(x, y) \in[-1,1] \times[-1,1] \\
@@ -15,7 +15,7 @@ $$
 \mathrm{u}=\mathrm{e}^{\mathrm{x}+1}, \mathrm{y}=1
 \end{array}
 \right.
-$$
+```
 
 In addition, we compare the errors between the finite element solution and the exact solution at different parametrizations for different mesh dissections.
 
